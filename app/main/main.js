@@ -12,6 +12,7 @@ import SexFenBu from '../minsheng/sexfb';
 import HangYeFenBu from '../minsheng/hyfenbu';
 import GDP from '../jingji/gdp';
 import ShouRuZengSu from '../jingji/srzengsu';
+import XiaoFeiZhiShu from '../jingji/xfzhishu';
 
 import './main.less';
 
@@ -55,7 +56,7 @@ export class Main extends React.Component {
                     </div>
                     <div className="row-item"><GDP uuid="u6" title="赵全营总GDP、人均GDP"/></div>
                     <div className="row-item"><ShouRuZengSu uuid="u7" title="收入增速"/></div>
-                    <div className="row-item"><ChartPanel uuid="u8" title="消费指数"/></div>
+                    <div className="row-item"><XiaoFeiZhiShu uuid="u8" title="消费指数"/></div>
                     <div className="row-item"><ChartPanel uuid="u9" title="产业区块占比"/></div>
                 </div>
                 <div className="col">
