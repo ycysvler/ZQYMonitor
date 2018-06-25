@@ -28,6 +28,7 @@
 <div id="root" style="display:flex; position: absolute;left:0;top:0;right:0;bottom:0;">
 
 </div>
+<script type="text/javascript" src="/dist/echarts.min.js" ></script>
 <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
 <script type="text/javascript" src="/dist/<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
 <% } %>

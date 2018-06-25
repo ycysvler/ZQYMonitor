@@ -2,15 +2,10 @@
  * Created by yanggang on 2017/3/6.
  */
 import React from 'react';
-import {HashRouter as Router, Route, Link, Switch, Redirect} from 'react-router-dom';
 import moment from 'moment';
-import {Layout, Divider, Menu, message, Avatar} from 'antd';
+import '../../main/main.less';
 
-const {Header, Footer, Sider, Content} = Layout;
-
-import './main.less';
-
-export default class ChartPanel extends React.Component {
+export default class SexFenBu extends React.Component {
 
     constructor(props) {
         super(props);
@@ -31,24 +26,27 @@ export default class ChartPanel extends React.Component {
 
         var myChart = echarts.init(document.getElementById(this.props.uuid));
 
+
         var option = {
-            title: {
-                text: 'ECharts 入门示例'
-            },
-            tooltip: {},
-            legend: {
-                data:['销量']
+            grid:{
+                left:50,top:15,right:20, bottom:25
             },
             xAxis: {
-                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                type: 'category',
+                boundaryGap: false,
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
             },
-            yAxis: {},
+            yAxis: {
+                type: 'value'
+            },
             series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
+                data: [820, 932, 901, 934, 1290, 1330, 1320],
+                type: 'line',
+                areaStyle: {}
             }]
         };
+
+
 
         myChart.setOption(option);
     }
